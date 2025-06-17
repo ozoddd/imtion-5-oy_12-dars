@@ -4,54 +4,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s;
 }
+
 html {
   height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
 ul,
 ol {
   list-style: none;
 }
-a {
-  display: inline-block;
-  text-decoration: none;
-}
+
 img {
   display: flex;
   object-fit: cover;
 }
+
 body {
-  background-color: #fff7f0;
+  font-family: "Red Hat Text";
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: #fcf8f6;
 }
-main {
-  flex-grow: 1;
-}
+
 h1 {
   margin: 0;
 }
+
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin-right: auto;
+  max-width: 1340px;
   margin-left: auto;
-  padding-right: 30px;
+  margin-right: auto;
   padding-left: 30px;
+  padding-right: 30px;
 }
-.btn {
-  border: none;
-  color: #fff7f0;
-  font-weight: 700;
-  font-style: normal;
-  font-family: "Plus Jakarta Sans" sans-serif;
-  height: 56px;
-  line-height: 0.5;
-  width: 228px;
-  padding: 1.4rem 4.5rem;
-  border-radius: 28px;
-}
- 
