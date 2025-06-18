@@ -1,9 +1,9 @@
-@import "./vendors/normalize.scss";
-@import "./abstract/veriables";
-@import "./abstract/fuction";
+@import "./vendors/normalize";
+@import "./abstract/functions";
 @import "./abstract/mixins";
-@import "./base/typography";
+@import "./abstract/veriables";
 @import "./base/resets";
+@import "./base/typography";
 @import "./components/buttons";
 @import "./layouts/footer";
 @import "./layouts/header";
