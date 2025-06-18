@@ -12,129 +12,124 @@
         <section class="card">
           <div class="card-left">
             <h1 class="site-title">Desserts</h1>
-            <ul class="desserts-list" id="desserts-list">
-              <template>
-                <li class="dessert-item">
-                  <div class="card-top">
-                    <img
-                      class="dessert-image"
-                      src="./images/waffle.jpg"
-                      alt=""
-                      width="250"
-                      height="240"
-                    />
-                    <div class="dessert-btn-add hidden" id="dessert-btn-add">
-                      <button class="btn-remove-amount">
-                        <span
-                          ><svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 20 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5ZM10 1.25C5.1875 1.25 1.25 5.1875 1.25 10C1.25 14.8125 5.1875 18.75 10 18.75C14.8125 18.75 18.75 14.8125 18.75 10C18.75 5.1875 14.8125 1.25 10 1.25Z"
-                              fill="white"
-                            />
-                            <path
-                              d="M5 9.375H15V10.625H5V9.375Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                      </button>
-                      <span class="amount">1</span>
-                      <button class="btn-add-amount">
-                        <span>
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 20 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5ZM10 1.25C5.1875 1.25 1.25 5.1875 1.25 10C1.25 14.8125 5.1875 18.75 10 18.75C14.8125 18.75 18.75 14.8125 18.75 10C18.75 5.1875 14.8125 1.25 10 1.25Z"
-                              fill="white"
-                            />
-                            <path
-                              d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
-                    <button class="dessert-btn" id="dessert-btn">
-                      <img
+
+            <!-- Dynamic dessert list -->
+            <ul class="desserts-list" id="desserts-list"></ul>
+
+            <!-- Dessert item template -->
+            <template id="dessert-template">
+              <li class="dessert-item">
+                <div class="card-top">
+                  <img
+                    class="dessert-image"
+                    src="./images/waffle.jpg"
+                    alt="Waffle"
+                    width="250"
+                    height="240"
+                  />
+                  <div class="dessert-btn-add hidden">
+                    <button class="btn-remove-amount">
+                      <svg
                         width="20"
                         height="20"
-                        src="./images/shopping-card.svg"
-                        alt=""
-                      />
-                      <p class="btn-title" id="btn-title">Add to Cart</p>
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5ZM10 1.25C5.1875 1.25 1.25 5.1875 1.25 10C1.25 14.8125 5.1875 18.75 10 18.75C14.8125 18.75 18.75 14.8125 18.75 10C18.75 5.1875 14.8125 1.25 10 1.25Z"
+                          fill="white"
+                        />
+                        <path d="M5 9.375H15V10.625H5V9.375Z" fill="white" />
+                      </svg>
+                    </button>
+                    <span class="amount">1</span>
+                    <button class="btn-add-amount">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5ZM10 1.25C5.1875 1.25 1.25 5.1875 1.25 10C1.25 14.8125 5.1875 18.75 10 18.75C14.8125 18.75 18.75 14.8125 18.75 10C18.75 5.1875 14.8125 1.25 10 1.25Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+                          fill="white"
+                        />
+                      </svg>
                     </button>
                   </div>
-                  <div class="card-bottom">
-                    <p class="dessert-title">Waffle</p>
-                    <p class="dessert-desc">Waffle with Berries</p>
-                    <p class="dessert-price">$6.50</p>
-                  </div>
-                </li>
-              </template>
-            </ul>
+                  <button class="dessert-btn">
+                    <img
+                      width="20"
+                      height="20"
+                      src="./images/shopping-card.svg"
+                      alt="Add to cart icon"
+                    />
+                    <p class="btn-title">Add to Cart</p>
+                  </button>
+                </div>
+                <div class="card-bottom">
+                  <p class="dessert-title">Waffle</p>
+                  <p class="dessert-desc">Waffle with Berries</p>
+                  <p class="dessert-price">$6.50</p>
+                </div>
+              </li>
+            </template>
           </div>
+
           <div class="card-right">
-            <aside id="cart" class="cart">
+            <aside class="cart" id="cart">
               <h2 class="card-right-title">Your Cart</h2>
               <img
                 class="card-right-image"
                 src="./images/cake-icon.svg"
-                alt=""
+                alt="Cart icon"
                 width="128"
                 height="128"
               />
-              <div class="card-list">
-               
-                  <div class="card-item">
-                    <div class="card-item__left">
-                      <h3 class="dessert-name">Classic Tiramisu</h3>
 
-                      <div class="card-item__bottom">
-                        <span class="cart-item__quantity">1x</span>
-                        <span class="cart-item__price"> @$5.50</span>
-                        <span class="cart-item__total">$5.50</span>
-                      </div>
+              <div class="card-list" id="cart-list">
+                <div class="card-item">
+                  <div class="card-item__left">
+                    <h3 class="dessert-name">Classic Tiramisu</h3>
+                    <div class="card-item__bottom">
+                      <span class="cart-item__quantity">1x</span>
+                      <span class="cart-item__price"> @$5.50</span>
+                      <span class="cart-item__total">$5.50</span>
                     </div>
-
-                    <button class="remover-btn">
-                      <span
-                        ><svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 1.25C5.125 1.25 1.25 5.125 1.25 10C1.25 14.875 5.125 18.75 10 18.75C14.875 18.75 18.75 14.875 18.75 10C18.75 5.125 14.875 1.25 10 1.25ZM10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5Z"
-                            fill="#AD8A85"
-                          />
-                          <path
-                            d="M13.375 14.375L10 11L6.625 14.375L5.625 13.375L9 10L5.625 6.625L6.625 5.625L10 9L13.375 5.625L14.375 6.625L11 10L14.375 13.375L13.375 14.375Z"
-                            fill="#AD8A85"
-                          />
-                        </svg>
-                      </span>
-                    </button></div
-                >
-                  </ul>
+                  </div>
+                  <button class="remover-btn">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 1.25C5.125 1.25 1.25 5.125 1.25 10C1.25 14.875 5.125 18.75 10 18.75C14.875 18.75 18.75 14.875 18.75 10C18.75 5.125 14.875 1.25 10 1.25ZM10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5Z"
+                        fill="#AD8A85"
+                      />
+                      <path
+                        d="M13.375 14.375L10 11L6.625 14.375L5.625 13.375L9 10L5.625 6.625L6.625 5.625L10 9L13.375 5.625L14.375 6.625L11 10L14.375 13.375L13.375 14.375Z"
+                        fill="#AD8A85"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </aside>
           </div>
         </section>
       </div>
     </main>
-    <!-- <script type="module" src="./js/app.js"></script> -->
+
+    <script type="module" src="./js/app.js"></script>
   </body>
-</html>S
+</html>
+
